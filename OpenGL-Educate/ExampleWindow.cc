@@ -53,7 +53,7 @@ void ExampleWindow::render()
 //	glEnable(GL_TEXTURE_2D);
 //	_crate_texture.bind();
 //	_cube.draw();
-	draw_cone(16);
+	draw_cone(10);
 
 }
 

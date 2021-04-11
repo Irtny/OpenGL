@@ -5,8 +5,14 @@
  *      Author: Домашний
  */
 
+
 #ifndef PRIMITIVES_H_
 #define PRIMITIVES_H_
+
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <cmath>
+
 void cart2cyl(	double x, double y, double z,
 				double &r, double &phi, double &cz );
 

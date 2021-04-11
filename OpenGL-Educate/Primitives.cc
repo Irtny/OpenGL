@@ -149,31 +149,22 @@ void draw_cone(int sides)
 						phi2 = phi_step * (side+1),
 						phin = (phi1 + phi2) / 2.;
 
-				double x1, x2, y1, y2, z1, z2;
-				double xn1, xn2, yn1, yn2, zn1, zn2;
+				double x1, x2, y1, y2, z1, z2, xn, yn, zn;
 				cyl2cart(1., phi1, 0., x1, y1, z1);
 				cyl2cart(1., phi2, 1., x2, y2, z2);
-				sph2cart(1., phi1, Pi/4, xn1, yn1, zn1);
-				sph2cart(1., phi2, Pi/4, xn2, yn2, zn2);
-				glBegin(GL_TRIANGLES);
+				sph2cart(1., phin, Pi/4, xn, yn, zn);				glBegin(GL_TRIANGLES);
 				{
 
+					glNormal3d(xn, yn, zn);
+					glVertex3d(0., 0., 1.);
+					glVertex3d(x1, y1, 0.);
+					glVertex3d(x2, y2, 0.);
 					glNormal3d(0., 0., -1.);
 					glVertex3d(0., 0., 0.);
 					glVertex3d(x2, y2, 0.);
 					glVertex3d(x1, y1, 0.);
-				}
-				glBegin(GL_QUADS);
-				{
-					glNormal3d(xn1, yn1, zn1);
-					glVertex3d(0., 0., 1.);
-					glNormal3d(xn1, yn1, zn1);
-					glVertex3d(x2, y2, 0.);
-					glNormal3d(xn1, yn1, zn1);
-					glVertex3d(x2, y2, 1.);
-				}
-				glEnd();
 
+				}
 				glEnd();
 			}
 }
