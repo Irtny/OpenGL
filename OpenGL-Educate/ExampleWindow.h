@@ -14,6 +14,7 @@
 #include "Texture.h"
 #include "SimpleModel.h"
 
+
 class ExampleWindow: public Window {
 protected:
 	double _angle { 0. };

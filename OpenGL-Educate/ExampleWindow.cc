@@ -8,6 +8,7 @@
 #include "ExampleWindow.h"
 
 #include <cmath>
+#include "Primitives.h"
 
 static constexpr double Pi = acos(-1.);
 
@@ -49,10 +50,10 @@ void ExampleWindow::render()
 
 	glRotated(_angle, 0., 0., 1.);
 
-	glEnable(GL_TEXTURE_2D);
-	_crate_texture.bind();
-	_cube.draw();
-
+//	glEnable(GL_TEXTURE_2D);
+//	_crate_texture.bind();
+//	_cube.draw();
+	draw_cone(16);
 
 }
 
