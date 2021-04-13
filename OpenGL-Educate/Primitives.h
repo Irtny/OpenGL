@@ -29,8 +29,8 @@ void draw_prism(int sides);
 void draw_cylindr(int sides);
 void draw_pyramid(int sides);
 void draw_cone(int sides);
-void draw_sphere(int sides);
-void draw_sphere_smooth(int sides);
+void draw_sphere_smooth(int rows, int cols);
+void draw_sphere_smooth_motion(int rows, int cols, double cdx, double cdy, double cdz, double cdr);
 
 
 

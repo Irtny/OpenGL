@@ -36,6 +36,8 @@ public:
 	void draw();
 
 	static SimpleModel create_cube();
+	static SimpleModel create_roof();
+	static SimpleModel create_pipe();
 };
 
 #endif /* SIMPLEMODEL_H_ */
