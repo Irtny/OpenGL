@@ -49,7 +49,7 @@ void ExampleWindow::render()
 	glLoadIdentity();
 
 	gluLookAt(
-			25., 25., 3,
+			20., 20., 3,
 			0.0, 0.0, 0.,
 			0.0, 0., 1.0);
 
